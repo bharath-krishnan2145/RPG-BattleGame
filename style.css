@@ -1,0 +1,115 @@
+/* General styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2c3e50);
+  color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #ffd700;
+  animation: bounceIn 1s;
+}
+
+#text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  font-size: 18px;
+}
+
+/* Button styling */
+button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  margin: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+button:hover {
+  background: #ffa726;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+  background: #fb8c00;
+}
+
+/* Stats styling */
+#monsterStats, #xpText, #healthText, #goldText {
+  font-weight: bold;
+  margin: 5px;
+  font-size: 18px;
+}
+
+#monsterStats {
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #e91e63;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+#monsterName, #monsterHealth {
+  font-size: 20px;
+  color: #f06292;
+}
+
+/* Inventory styling */
+#inventory {
+  margin-top: 20px;
+  padding: 10px;
+  border: 2px solid #4fc3f7;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.3);
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Layout responsiveness */
+@media (max-width: 600px) {
+  button {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  #text {
+    font-size: 16px;
+  }
+
+  #monsterStats {
+    font-size: 16px;
+  }
+}
